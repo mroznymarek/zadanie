@@ -5,19 +5,21 @@ class Text extends React.Component {
         name: "Ala"
     }
 
-textChangeHandler = (event) => this.setState ({
-    text: event.target.value,
-})
+    textChangeHandler = (event) => this.setState({
+        text: event.target.value,
+    })
 
-    render() {  
+    render() {
         return (
             <div>
+                <input
+                    value={this.state.text}
+                    onChange={this.textChangeHandler}
+                />
+                <button>
+                    DODAJ
+                </button>
                 <h1>{this.state.text}</h1>
-
-            <input
-                value={this.state.text}
-                onChange = {this.textChangeHandler}
-            />    
             </div>
         )
     }
